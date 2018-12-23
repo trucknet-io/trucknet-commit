@@ -1,6 +1,8 @@
 const path = require('path');
-const projectRoot = process.cwd();
+const projectRoot = path.resolve();
 const fs = require('fs');
+
+console.log(projectRoot);
 
 if (fs.existsSync(path.join(projectRoot, 'copy-default-files.js'))) {
   console.log('This script should be run only as a dependency postinstall script');
