@@ -1,28 +1,23 @@
 const types = {
-  chore: {
-    description: "Build process or auxiliary tool changes",
-    emoji: "🤖",
-    value: "chore"
-  },
-  ci: {
-    description: "CI related changes",
-    emoji: "🎡",
-    value: "ci"
-  },
-  docs: {
-    description: "Documentation only changes",
-    emoji: "✏️",
-    value: "docs"
+  wip: {
+    description: "Work in progress (commit in the middle of the process)",
+    emoji: "🚧",
+    value: "wip"
   },
   feat: {
-    description: "A new feature",
-    emoji: "🎸",
+    description: "A new feature (can be a small dev feat, not always feat from Pivotal tracker)",
+    emoji: "✨",
     value: "feat"
   },
   fix: {
     description: "A bug fix",
     emoji: "🐛",
     value: "fix"
+  },
+  design: {
+    description: "Any visual change of the product, that is not a feature by it's own",
+    emoji: "💄",
+    value: "design"
   },
   perf: {
     description: "A code change that improves performance",
@@ -31,29 +26,29 @@ const types = {
   },
   refactor: {
     description: "A code change that neither fixes a bug or adds a feature",
-    emoji: "💡",
+    emoji: "♻️",
     value: "refactor"
   },
-  release: {
-    description: "Create a release commit",
-    emoji: "🏹",
-    value: "release"
-  },
-  style: {
-    description: "Markup, white-space, formatting, missing semi-colons...",
-    emoji: "💄",
-    value: "style"
+  chore: {
+    description: "Any other change in the product",
+    emoji: "🤖",
+    value: "chore"
   },
   test: {
     description: "Adding missing tests",
     emoji: "💍",
     value: "test"
   },
-  wip: {
-    description: "Work in progress",
-    emoji: "🚧",
-    value: "wip"
-  }
+  docs: {
+    description: "Documentation only changes",
+    emoji: "📝",
+    value: "docs"
+  },
+  release: {
+    description: "Create a release commit",
+    emoji: "🏹",
+    value: "release"
+  },
 };
 
 module.exports = types;
