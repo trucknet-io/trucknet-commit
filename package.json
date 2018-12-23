@@ -1,0 +1,27 @@
+{
+  "name": "trucknet-commit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trucknet-io/trucknet-commit.git"
+  },
+  "keywords": [
+    "git",
+    "trucknet",
+    "commitlint",
+    "commitizen",
+    "git",
+    "flow"
+  ],
+  "author": "goooseman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trucknet-io/trucknet-commit/issues"
+  },
+  "homepage": "https://github.com/trucknet-io/trucknet-commit#readme"
+}
