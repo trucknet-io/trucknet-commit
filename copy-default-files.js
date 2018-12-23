@@ -1,15 +1,19 @@
 const path = require('path');
-const projectRoot = path.resolve();
 const fs = require('fs');
 
-console.log(projectRoot);
+if (!process.env.INIT_CWD) {
+  throw new Error('This script should be run as postinstall script\n');
+}
+
+const projectRoot = path.resolve(process.env.INIT_CWD);
 
 if (fs.existsSync(path.join(projectRoot, 'copy-default-files.js'))) {
-  console.log('This script should be run only as a dependency postinstall script');
+  console.log('This script should be run only as a dependency postinstall script\n');
   return;
 }
 
-const defaultFilesDir = path.join('./default-files');
+// __dirname is the location of the source file
+const defaultFilesDir = path.join(__dirname, '/default-files');
 
 const files = fs.readdirSync(defaultFilesDir);
 
