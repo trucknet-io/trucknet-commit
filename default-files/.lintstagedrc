@@ -1,0 +1,23 @@
+{
+  "linters": {
+    "*.js": [
+      "npm run lint:prettier",
+      "npm run lint:eslint:fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.ts": [
+      "tslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "*.tsx": [
+      "tslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
