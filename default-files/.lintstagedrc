@@ -6,7 +6,7 @@
       "git add"
     ],
     "*.json": [
-      "prettier --write",
+      "npm run lint:prettier",
       "git add"
     ],
     "*.ts": [
