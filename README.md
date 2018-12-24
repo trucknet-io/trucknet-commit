@@ -7,3 +7,4 @@
 - `npm remove husky lint-staged git-cz commitizen commitizen-* @commitlint*`
 - `rm .huskyrc .lintstagedrc .czrc`
 - `npm i -D trucknet-commit`
+- Add `"commit": "commit-prompt"` script to package.json
