@@ -1,13 +1,18 @@
-# Required ENV's
-# PROJECT_TOKEN - the GitLab access API token to create a MR
+image: node:10.14-alpine
 
 stages:
-    - open_merge_request
+  - test
 
-open_merge_request:
-    before_script: []   # We do not need any setup work, let's remove the global one (if any)
-    stage: open_merge_request
-    only:
-        - /^feature\/*/   # We have a very strict naming convention
-    script:
-        - HOST=${CI_PROJECT_URL} CI_PROJECT_ID=${CI_PROJECT_ID} CI_COMMIT_REF_NAME=${CI_COMMIT_REF_NAME} GITLAB_USER_ID=${GITLAB_USER_ID} PRIVATE_TOKEN=${PRIVATE_TOKEN} ./node_modules/trucknet-commit/ci/create-merge-request.sh # The name of the script
+test:
+  stage: test
+  before_script:
+    - apk update && apk upgrade && apk add --no-cache bash git openssh
+    - npm i
+  script:
+    - npm run lint
+    - npm run test:ci
+
+  coverage: /All files\s*\|\s*([\d\.]+)/
+  cache:
+    paths:
+      - node_modules/
