@@ -7,8 +7,8 @@ module.exports = {
   questions: [
     "type",
     "scope",
-    "pivotalTrackerId",
     "subject",
+    "pivotalTrackerId",
     "body",
     "breaking"
   ],
