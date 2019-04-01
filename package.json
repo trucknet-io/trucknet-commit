@@ -4,7 +4,7 @@
   "description": "Commit flow for Trucknet. Includes lint-staged, commitlint (with config), commit-prompt (fork of git-cz) (with config), husky and script to create MR automatically on GitLab",
   "scripts": {
     "postinstall": "node ./copy-default-files",
-    "commit": "commit-prompt",
+    "commit": "commit-prompt --no-verify",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
