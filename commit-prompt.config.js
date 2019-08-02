@@ -8,7 +8,7 @@ module.exports = {
     "type",
     "scope",
     "subject",
-    "pivotalTrackerId",
+    "trackerId",
     "body",
     "breaking"
   ],
