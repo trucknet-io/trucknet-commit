@@ -1,6 +1,6 @@
 {
   "name": "trucknet-commit",
-  "version": "1.5.5",
+  "version": "1.5.6",
   "description": "Commit flow for Trucknet. Includes lint-staged, commitlint (with config), commit-prompt (fork of git-cz) (with config), husky and script to create MR automatically on GitLab",
   "scripts": {
     "postinstall": "node ./copy-default-files",
@@ -28,7 +28,7 @@
   "dependencies": {
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
-    "commit-prompt": "^2.1.4",
+    "commit-prompt": "^2.2.3",
     "husky": "^3.0.9",
     "lint-staged": "^9.4.2"
   },
